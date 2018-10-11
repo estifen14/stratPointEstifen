@@ -1,5 +1,7 @@
 package org.practice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * Created by estifen on 10/11/2018.
  */
@@ -8,12 +10,16 @@ public class Profile {
     private String id;
     private boolean active;
     private boolean blocked;
+    private String balance;
     private String picture;
     private byte age;
     private Name name;
+    private String email;
     private String phone;
     private String address;
     private String profile;
+    @JsonProperty("date_registered")
+    private Long dateRegistered;
 
     public String getId() {
         return id;
@@ -37,6 +43,14 @@ public class Profile {
 
     public void setBlocked(boolean blocked) {
         this.blocked = blocked;
+    }
+
+    public String getBalance() {
+        return balance;
+    }
+
+    public void setBalance(String balance) {
+        this.balance = balance;
     }
 
     public String getPicture() {
@@ -63,6 +77,14 @@ public class Profile {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -85,5 +107,13 @@ public class Profile {
 
     public void setProfile(String profile) {
         this.profile = profile;
+    }
+
+    public Long getDateRegistered() {
+        return dateRegistered;
+    }
+
+    public void setDateRegistered(Long dateRegistered) {
+        this.dateRegistered = dateRegistered;
     }
 }

@@ -1,19 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: estifen
-  Date: 10/11/2018
-  Time: 1:42 PM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title></title>
+    <title>HOME PAGE</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 
   <style>
     .dataTables_filter {
@@ -24,7 +22,7 @@
     var redirect;
     $(document).ready(function(){
       redirect = function(id){
-        window.location.href='/profile/' + id;
+        window.location.href='/view/' + id;
       }
 
       $(document).ready( function () {
@@ -44,7 +42,7 @@
 </head>
 <body>
     <input type="text" id="searchbox" placeholder="search">
-    <table id="myTable">
+    <table id="myTable" border="1">
       <thead>
         <th>Name</th>
         <th>Age</th>

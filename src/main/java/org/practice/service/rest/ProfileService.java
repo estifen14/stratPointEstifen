@@ -9,6 +9,16 @@ import java.util.List;
  */
 public interface ProfileService {
 
+    /**
+     * Return List of Profile fetched from GET request
+     */
     List<Profile> getAllProfiles();
 
+    /**
+     * Return Profile by using of id
+     *
+     * @param id id of Profile
+     * @return Profile fetched by id
+     */
+    Profile getProfile(String id);
 }
